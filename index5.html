@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validação de Entrada de Usuário</title>
+    <script>
+        function validarUsuario() {
+            // Suponhamos que esses sejam os valores válidos de nome de usuário e senha
+            let nomeUsuarioValido = "usuario123";
+            let senhaValida = "senha@123";
+
+            // Obtenha os valores inseridos pelo usuário
+            let nomeUsuarioInserido = document.getElementById("nomeUsuario").value;
+            let senhaInserida = document.getElementById("senha").value;
+
+            // Verifique se os valores inseridos correspondem aos válidos
+            if (nomeUsuarioInserido === nomeUsuarioValido && senhaInserida === senhaValida) {
+                alert("Login bem-sucedido! Você está autorizado a acessar o aplicativo.");
+            } else {
+                alert("Nome de usuário ou senha incorretos. Tente novamente.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Validação de Entrada de Usuário</h1>
+    <label for="nomeUsuario">Nome de Usuário:</label>
+    <input type="text" id="nomeUsuario"><br><br>
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha"><br><br>
+    <button onclick="validarUsuario()">Entrar</button>
+</body>
+</html>

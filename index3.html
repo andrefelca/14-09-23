@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Classificar em Ordem Decrescente</title>
+    <script>
+        function classificarDecrescente() {
+            // Matriz de números desordenados
+            let numeros = [42, 15, 7, 31, 55];
+
+            // Usando um loop while para classificar a matriz em ordem decrescente
+            let i = 0;
+            while (i < numeros.length - 1) {
+                let j = i + 1;
+                while (j < numeros.length) {
+                    if (numeros[i] < numeros[j]) {
+                        // Troca os números se estiverem fora de ordem
+                        let temp = numeros[i];
+                        numeros[i] = numeros[j];
+                        numeros[j] = temp;
+                    }
+                    j++;
+                }
+                i++;
+            }
+
+            // Exibe os números ordenados na página
+            let resultado = document.getElementById("resultado");
+            resultado.innerHTML = "Números em ordem decrescente: " + numeros.join(", ");
+        }
+    </script>
+</head>
+<body>
+    <h1>Classificar Números em Ordem Decrescente</h1>
+    <button onclick="classificarDecrescente()">Classificar Números</button>
+    <div id="resultado"></div>
+</body>
+</html>
+

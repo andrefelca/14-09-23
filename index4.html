@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Busca no Banco de Dados</title>
+    <script>
+        function buscarNoBancoDeDados() {
+            // Simulando uma busca no banco de dados que retorna false para indicar que o item não foi encontrado.
+            let resultadoDaBusca = false;
+
+            try {
+                if (resultadoDaBusca === false) {
+                    throw new Error("Desculpe, o item que você está procurando não foi encontrado.");
+                }
+
+                // Processamento adicional se o item for encontrado
+                // ...
+            } catch (error) {
+                let mensagemErro = document.getElementById("mensagemErro");
+                mensagemErro.innerHTML = error.message;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Busca no Banco de Dados</h1>
+    <button onclick="buscarNoBancoDeDados()">Buscar Item</button>
+    <div id="mensagemErro"></div>
+</body>
+</html>

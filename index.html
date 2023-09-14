@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Busca por Abacaxi</title>
+    <script>
+        function buscarAbacaxi() {
+            // Banco de dados de frutas
+            let frutas = ["maçã", "banana", "laranja", "abacaxi", "morango"];
+
+            // Fruta que estamos procurando
+            let frutaProcurada = document.getElementById("frutaProcurada").value;
+
+            // Elemento onde exibiremos o resultado
+            let resultado = document.getElementById("resultado");
+
+            // Utilizando o switch/case para buscar a fruta no banco de dados
+            switch (frutaProcurada) {
+                case "abacaxi":
+                    resultado.innerHTML = "Abacaxi encontrado! Disponível para venda.";
+                    // Adicione aqui o código para atualizar o estoque ou realizar a ação desejada.
+                    break;
+                case "maçã":
+                case "banana":
+                case "laranja":
+                case "morango":
+                    resultado.innerHTML = "A fruta " + frutaProcurada + " está disponível, mas não é abacaxi.";
+                    // Adicione aqui o código para lidar com outras frutas, se necessário.
+                    break;
+                default:
+                    resultado.innerHTML = "A fruta " + frutaProcurada + " não está disponível no estoque.";
+                    // Adicione aqui o código para lidar com a situação em que a fruta não foi encontrada.
+                    break;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Verificação de Disponibilidade de Abacaxi</h1>
+    <label for="frutaProcurada">Digite uma fruta:</label>
+    <input type="text" id="frutaProcurada">
+    <button onclick="buscarAbacaxi()">Verificar</button>
+    <p id="resultado"></p>
+</body>
+</html>
